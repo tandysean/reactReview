@@ -1,3 +1,122 @@
-body {
-  background: yellow;
-}
+@charset "UTF-8";
+
+.app-wrapper {
+  max-width: 600px;
+  font-size: 24px;
+
+  h1 {
+    border-bottom: 1px solid black;
+  }
+
+  .average {
+    text-align: center;
+  }
+
+  .button {
+    padding: 10px;
+    border: 1px;
+    font-size: 24px;
+    border: 1px solid black;
+    cursor: pointer;
+
+    &.main-action {
+      background-color: #29abe2;
+      color: white;
+
+      &:hover {
+        background-color: #1e81ab;
+      }
+
+      &:active {
+
+      }
+    }
+  }
+
+  .rating_selection {
+    text-align: center;
+  }
+  .rating_selection label:first-of-type {
+    display: none;
+  }
+  .rating_selection input[type='radio'],
+  .rating_selection span {
+    display: none;
+  }
+  .rating_selection label {
+    cursor: pointer;
+  }
+  .rating_selection label:before {
+    display: inline-block;
+    content: "★";
+    font-size: 80px;
+    letter-spacing: 10px;
+    color: #e9cd10;
+  }
+  .rating_selection input:checked + label ~ label:before {
+    color: #aaa;
+  }
+  .rating_selection:hover label[for]:before {
+    color: #e9cd10;
+  }
+  .rating_selection:hover label:hover ~ label:before {
+    color: #aaa;
+  }
+
+  input[type='text'],
+  textarea {
+    display: block;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 24px;
+    margin: 20px 0;
+    padding: 10px;
+
+  }
+// DISPLAY COMPONENT
+  .display-reviews {
+     .rating {
+       unicode-bidi: bidi-override;
+       text-align: center;
+       font-size: 80px;
+     }
+     .rating > span {
+       display: inline-block;
+       position: relative;
+       width: 1.1em;
+
+       &.active {
+          &::before {
+            content: "\2605";
+            color: rgba(244, 194, 66, .7);
+            position: absolute;
+          }
+       }
+    }
+   }
+
+   .review-container{
+     text-align: center;
+
+     .review {
+        list-style-type: none;
+        border-top: 1px dotted #ccc;
+        padding-top: 20px;
+
+        &:first-child {
+          border: none;
+        }
+
+        .name {
+          display: block;
+          font-size: 18px;
+          text-align: right;
+
+          &::before {
+            content: '-' ;
+          }
+        }
+     }
+
+   }
+ }
