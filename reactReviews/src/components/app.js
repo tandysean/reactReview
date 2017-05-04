@@ -19,7 +19,7 @@ export default class App extends Component {
        {
          name: "Sean",
          review: "Shittiest book ever",
-         rating: 3
+         rating: 5
        },
        {
          name: "Dexter",
